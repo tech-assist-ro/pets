@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.2/ref/settings/
 """
 
 from pathlib import Path
+import dotenv
+import os
+
+dotenv.load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -23,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure--+ol&qbsei)85kv-($zqi$te@pbs3h*7zi)@nimt^s690vrfa-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv("DEBUG")
 
 ALLOWED_HOSTS = []
 
@@ -40,10 +44,10 @@ INSTALLED_APPS = [
     'adoption',
     'rest_framework',      # for API later
     'django.contrib.sites',  # needed for Allauth
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'djstripe',         # for Stripe support
+    # 'allauth',
+    # 'allauth.account',
+    # 'allauth.socialaccount',
+    # 'djstripe',         # for Stripe support
 ]
 
 MIDDLEWARE = [
@@ -76,6 +80,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'pet_adoption_platform.wsgi.application'
 
 SITE_ID = 1
+AUTH_USER_MODEL = 'adoption.User'
 
 
 # Database

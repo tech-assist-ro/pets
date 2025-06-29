@@ -1,1 +1,16 @@
 env
+# Byte-compiled files
+__pycache__/
+*.py[cod]
+*.pyc
+
+# Environment
+.env
+
+# DB (local)
+*.sqlite3
+
+# VSCode settings (optional)
+.vscode/
+pet_adoption_platform/__pycache__/settings.cpython-312.pyc
+pet_adoption_platform/__pycache__/__init__.cpython-312.pyc
