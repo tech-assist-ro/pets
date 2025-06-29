@@ -12,5 +12,3 @@ __pycache__/
 
 # VSCode settings (optional)
 .vscode/
-pet_adoption_platform/__pycache__/settings.cpython-312.pyc
-pet_adoption_platform/__pycache__/__init__.cpython-312.pyc
